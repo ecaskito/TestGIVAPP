@@ -761,13 +761,14 @@
         $(document).bind("mobileinit", function () { $.mobile.page.prototype.options.addBackBtn = true; });
 
         $(document).bind("mobileinit", function () {
+            $.mobile.defaultPageTransition = 'none';
             $.mobile.loader.prototype.options.text = "loading";
             $.mobile.loader.prototype.options.textVisible = true;
-            $.mobile.loader.prototype.options.theme = "a";
-            $.mobile.loader.prototype.options.textonly = false;
-            $.mobile.loader.prototype.options.html = "<span class='ui-bar ui-overlay-c ui-corner-all'><img src='images/Logo.png' /><h2>loading</h2></span>";
+            //$.mobile.loader.prototype.options.theme = "a";
+            $.mobile.loader.prototype.options.textonly = true;
+            //$.mobile.loader.prototype.options.html = "<span class='ui-bar ui-overlay-c ui-corner-all'><img src='images/Logo.png' /><h2>loading</h2></span>";
         });
-        $.mobile.loading("show");
+        //$.mobile.loading("show");
         //$.mobile.loading("show", {
         //    text: "foo",
         //    textVisible: true,
