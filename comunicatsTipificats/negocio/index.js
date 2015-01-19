@@ -71,8 +71,8 @@ function deviceReady() {
 }
 function handleBackButton() {
     try {
-        history.go(-1);
         if (navigator.app) {
+            //history.go(-1);
             navigator.app.backHistory();
         } else if (navigator.device) {
             navigator.device.backHistory();
