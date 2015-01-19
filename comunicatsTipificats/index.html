@@ -722,19 +722,6 @@
 
 
         function salir() {
-            try
-            {
-                //alert('aa');
-                //e.preventDefault();
-                //alert('bb');
-                //navigator.app.exitApp();
-                //alert('cc');
-
-            }
-            catch (ex) {
-                //alert(ex.message);
-            }
-
             if (navigator.app) {
                 navigator.app.exitApp();
             } else if (navigator.device) {
@@ -775,10 +762,9 @@
 
         $(document).on("mobileinit", function () {
             $.mobile.loader.prototype.options.text = "loading";
-            $.mobile.loader.prototype.options.textVisible = true;
-            $.mobile.loader.prototype.options.textonly = false;
+            $.mobile.loader.prototype.options.textVisible = false;
             $.mobile.loader.prototype.options.theme = "a";
-            $.mobile.loader.prototype.options.html = "<span class='ui-bar ui-overlay-c ui-corner-all'><img src='images/Logo.png' /><h2>loading</h2></span>";
+            $.mobile.loader.prototype.options.html = "";
         });
         //$.mobile.loading("show", {
         //    text: "foo",

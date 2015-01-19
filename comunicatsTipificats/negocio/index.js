@@ -71,14 +71,22 @@ function deviceReady() {
 }
 function handleBackButton() {
     try {
-        if (navigator.app) {
-            //history.go(-1);
-            navigator.app.backHistory();
-        } else if (navigator.device) {
-            navigator.device.backHistory();
+        if ($.mobile.activePage.attr('id') == '#pageIndex') {
+            if (navigator.app) {
+                navigator.app.exitApp();
+            } else if (navigator.device) {
+                navigator.device.exitApp();
+            }
         }
-        else {
-            window.history.back();
+        else{
+            if (navigator.app) {
+                navigator.app.backHistory();
+            } else if (navigator.device) {
+                navigator.device.backHistory();
+            }
+            else {
+                window.history.back();
+            }
         }
     }
     catch (ex) {
