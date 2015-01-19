@@ -70,7 +70,6 @@ function deviceReady() {
 
 }
 function handleBackButton() {
-    alert("atras");
     try {
         history.go(-1);
         if (navigator.app) {
@@ -102,9 +101,7 @@ function abrirPagina(sPag, bBack) {
  */
 
     $.mobile.changePage('#' + sPag, {
-        transition: "none",
-        reverse: true
-        ,changeHash: bBack
+        transition: "none"
     });
 
     switch(sPag)
