@@ -63,7 +63,7 @@ function deviceReady() {
         }
 
         inicioPaginaTipoIncidencia();
-        navigator.splashscreen.hide();
+        //navigator.splashscreen.hide();
     }
     catch (ex) {
         //alert(ex.message);

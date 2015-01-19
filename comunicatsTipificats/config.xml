@@ -119,10 +119,14 @@
     <gap:splash src="splash.png" />
     <gap:splash src="icons/ios/Default-Landscape~ipad.png" width="1024" height="768" />
     <gap:splash src="icons/ios/Default-Portrait~ipad.png" width="768" height="1024" />
-    <gap:splash src="icons/android/splash-ldpi.png" gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="icons/android/splash-mdpi.png" gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="icons/android/splash-hdpi.png" gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="icons/android/splash-xdpi.png" gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="icons/android/splash-ldpi.png" gap:platform="android" gap:density="ldpi" orientation="land" />
+    <gap:splash src="icons/android/splash-mdpi.png" gap:platform="android" gap:density="mdpi" orientation="land"/>
+    <gap:splash src="icons/android/splash-hdpi.png" gap:platform="android" gap:density="hdpi" orientation="land"/>
+    <gap:splash src="icons/android/splash-xdpi.png" gap:platform="android" gap:density="xhdpi" orientation="land"/>
+    <gap:splash src="icons/android/splash-ldpi-port.png" gap:platform="android" gap:density="ldpi" orientation="port" />
+    <gap:splash src="icons/android/splash-mdpi-port.png" gap:platform="android" gap:density="mdpi" orientation="port"/>
+    <gap:splash src="icons/android/splash-hdpi-port.png" gap:platform="android" gap:density="hdpi" orientation="port"/>
+    <gap:splash src="icons/android/splash-xdpi-port.png" gap:platform="android" gap:density="xhdpi" orientation="port"/>
 
  <!-- Define app splash screen for each platform. -->
   <!--<gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
