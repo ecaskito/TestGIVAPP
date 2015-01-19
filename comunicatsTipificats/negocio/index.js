@@ -34,7 +34,7 @@ function deviceReady() {
     /*hgs 080414*/
     //navigator.splashscreen.hide();
 
-    
+
     try {
         //$.mobile.phonegapNavigationEnabled = true;
         document.addEventListener("backbutton", handleBackButton, false); //Hgs 080514
@@ -81,6 +81,9 @@ function handleBackButton() {
         else {
             window.history.back();
         }
+    }
+    catch (ex) {
+        //alert(ex.message);
     }
 }
 
