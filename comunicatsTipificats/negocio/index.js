@@ -32,7 +32,7 @@ window.addEventListener('load', function () {
 
 function deviceReady() {
     /*hgs 080414*/
-    //navigator.splashscreen.hide();
+    navigator.splashscreen.hide();
 
     try {
         //$.mobile.phonegapNavigationEnabled = true;
@@ -68,19 +68,20 @@ function deviceReady() {
    
 
 }
-function handleBackButton(){
+function handleBackButton() {
+    alert("atras");
     try {
-        if ($.mobile.activePage.attr('id') == '#pageIndex') {
-            navigator.app.exitApp();
-        } else {
+        history.go(-1);
+        if (navigator.app) {
             navigator.app.backHistory();
+        } else if (navigator.device) {
+            navigator.device.backHistory();
+        }
+        else {
+            window.history.back();
         }
     }
-    catch (ex) {
-        //alert(ex.message);
-    }
 }
-
 
 // -------- COMUNES -----------------------------------------------------------------------
 
