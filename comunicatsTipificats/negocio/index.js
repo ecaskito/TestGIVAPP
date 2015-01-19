@@ -27,16 +27,15 @@ window.addEventListener('load', function () {
     } else {
         deviceReady();
     }
-    inicioPaginaTipoIncidencia();
 }, false);
 
 function deviceReady() {
     /*hgs 080414*/
     //navigator.splashscreen.hide();
 
-    setTimeout(function() {
-        navigator.splashscreen.hide();
-    }, 100);
+    //setTimeout(function() {
+    //    navigator.splashscreen.hide();
+    //}, 100);
     try {
         //$.mobile.phonegapNavigationEnabled = true;
         document.addEventListener("backbutton", handleBackButton, false); //Hgs 080514
@@ -62,8 +61,9 @@ function deviceReady() {
             }
             catch (e) { mensaje('exception carregant llista de carrers : ' + e.message, 'error'); }
         }
-        
-        //navigator.splashscreen.hide();
+
+        inicioPaginaTipoIncidencia();
+        navigator.splashscreen.hide();
     }
     catch (ex) {
         //alert(ex.message);
