@@ -69,7 +69,7 @@
 
 
     <!--hgs comentado pq he añadido los plugins-->
-  <feature name="http://api.phonegap.com/1.0/camera"/>
+  <!--<feature name="http://api.phonegap.com/1.0/camera"/>-->
   <feature name="http://api.phonegap.com/1.0/file"/>
   <feature name="http://api.phonegap.com/1.0/geolocation"/>
   <feature name="http://api.phonegap.com/1.0/media"/>
@@ -80,6 +80,8 @@
    <plugin name="Camera" value="CDVCamera" />
     <!--hgs para splash-->
     <plugin name="SplashScreen" value="”org.apache.cordova.SplashScreen"/>
+
+    <plugin name="org.apache.cordova.camera" version="0.3.2" />
 
     <!--hgs, crec que ho necessitare per iOS-->
    <plugin name="Geolocation" value="CDVLocation" />
