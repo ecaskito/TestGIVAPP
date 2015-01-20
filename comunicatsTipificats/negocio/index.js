@@ -1,6 +1,7 @@
 // funciones COMUNES -----------------------------------------------------------------------
 var pictureSource;
 var destinationType;
+
 var bAbroPagina = true;
 var aGlobalCarrers = null;
 var aCarrers = null;
@@ -229,6 +230,7 @@ function selectTipo(p_tipo) {
     TipoInciSel = p_tipo;
     abrirPagina('pageDatosIncidencia', false);
 }
+
 
 
 

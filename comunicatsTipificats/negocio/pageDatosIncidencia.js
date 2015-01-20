@@ -1,7 +1,8 @@
+var sFoto = '';
+
 var mapAlta = null;
 var posAlta = '';
 var sDireccionAlta = '';
-var sFoto = '';
 var sCoords = '';
 var sCoord_X = '';
 var sCoord_Y = '';
@@ -9,13 +10,44 @@ var sComentario = '';
 
 function inicioPaginaDatosIncidencia() {
 
+    navigator.camera.getPicture(hacerfotoOK, hacerFotoERROR, { quality: 20, destinationType: Camera.DestinationType.DATA_URL, correctOrientation: true,sourceType: Camera.PictureSourceType.CAMERA, encodingType: Camera.EncodingType.JPEG, saveToPhotoAlbum: false });
+
+}
+
+
+function hacerfotoOK(imageData) {
+    //var imagen = document.getElementById('imgFoto');
+    //imagen.style.display = 'block';
+    sFoto = imageData;
+    //imagen.src = "data:image/jpeg;base64," + sFoto;
+    cargarPaginaDatosIncidencia();
+}
+function hacerFotoERROR(errorOcancel) {
+    alert('hola');
+    sFoto = '';
+    //if (errorOcancel != null && (errorOcancel.indexOf('cancelled') < 0 && errorOcancel.indexOf('selected') < 0)) {
+    //    mensaje('Cap foto capturada : ' + errorOcancel.code);
+    //}
+    cargarPaginaDatosIncidencia();
+}
+
+function cargarPaginaDatosIncidencia() {
+
+
+
+    //mostrar foto
+    if (sFoto !=''){
+        var imagen = document.getElementById('imgFoto');
+        imagen.style.display = 'block';
+        imagen.src = "data:image/jpeg;base64," + sFoto;
+    }
+
     //cargar mapa
     iniciaMapa();
 
     $('#TipusInciImg').attr({"src":dicImagenes[TipoInciSel]});
     $('#TipusInciText').html(dicAyuda[TipoInciSel]);
 }
-
 
 
 function iniciaMapa() {
