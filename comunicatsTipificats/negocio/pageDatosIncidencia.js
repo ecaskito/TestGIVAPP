@@ -9,8 +9,13 @@ var sCoord_Y = '';
 var sComentario = '';
 
 function inicioPaginaDatosIncidencia() {
+try{
 
-    navigator.camera.getPicture(hacerfotoOK, hacerFotoERROR, { quality: 20, destinationType: Camera.DestinationType.DATA_URL, correctOrientation: true,sourceType: Camera.PictureSourceType.CAMERA, encodingType: Camera.EncodingType.JPEG, saveToPhotoAlbum: false });
+    navigator.camera.getPicture(hacerfotoOK, hacerFotoERROR, { quality: 20, destinationType: navigator.camera.DestinationType.DATA_URL, correctOrientation: true,sourceType: navigator.camera.PictureSourceType.CAMERA, encodingType: navigator.camera.EncodingType.JPEG, saveToPhotoAlbum: false });
+}
+    catch (ex){
+        alert(ex.message);
+    }
 
 }
 
@@ -22,8 +27,8 @@ function hacerfotoOK(imageData) {
     //imagen.src = "data:image/jpeg;base64," + sFoto;
     cargarPaginaDatosIncidencia();
 }
-function hacerFotoERROR(errorOcancel) {
-    alert('hola');
+function hacerFotoERROR(mensaje) {
+    alert(mensaje);
     sFoto = '';
     //if (errorOcancel != null && (errorOcancel.indexOf('cancelled') < 0 && errorOcancel.indexOf('selected') < 0)) {
     //    mensaje('Cap foto capturada : ' + errorOcancel.code);
