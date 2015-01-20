@@ -42,6 +42,9 @@ function deviceReady() {
         //$.mobile.phonegapNavigationEnabled = true;
         document.addEventListener("backbutton", handleBackButton, false); //Hgs 080514
 
+        pictureSource = navigator.camera.PictureSourceType;
+        destinationType = navigator.camera.DestinationType;
+
         if (phoneGapRun()) {
             pictureSource = navigator.camera.PictureSourceType;
             destinationType = navigator.camera.DestinationType;
