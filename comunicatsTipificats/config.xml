@@ -85,6 +85,8 @@
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
     <!--HABILITAR CÁMARA -->
+    <plugin name="org.apache.cordova.camera"  />
+    <plugin name="org.apache.cordova.camera.CameraLauncher"  />
 
     <plugin name="Capture" value="CDVCapture" />
    <!--<plugin name="Camera" value="CDVCamera" />-->

@@ -11,7 +11,7 @@ var sComentario = '';
 function inicioPaginaDatosIncidencia() {
 try{
 
-    navigator.camera.getPicture(hacerfotoOK, hacerFotoERROR, { quality: 20, destinationType: Camera.DestinationType.DATA_URL, correctOrientation: true,sourceType: Camera.PictureSourceType.CAMERA,  saveToPhotoAlbum: false });
+    navigator.camera.getPicture(hacerfotoOK, hacerFotoERROR, { quality: 20, destinationType: navigator.camera.DestinationType.DATA_URL, correctOrientation: true,sourceType:  navigator.camera.PictureSourceType.CAMERA,  saveToPhotoAlbum: false });
     //navigator.camera.getPicture(hacerfotoOK, hacerFotoERROR, { quality: 20, destinationType: pictureSource.DATA_URL });
 }
     catch (ex){
