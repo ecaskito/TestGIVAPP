@@ -35,7 +35,7 @@
 
   <!-- Customize your app and platform with the preference element. -->
     <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version"           value="3.6.3" />
+    <preference name="phonegap-version"           value="3.5.0" />
     <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />
     <!-- all: default means both landscape and portrait are enabled -->
@@ -69,7 +69,7 @@
 
 
     <!--hgs comentado pq he añadido los plugins-->
-  <!--<feature name="http://api.phonegap.com/1.0/camera"/>-->
+  <feature name="http://api.phonegap.com/1.0/camera"/>
   <feature name="http://api.phonegap.com/1.0/file"/>
   <feature name="http://api.phonegap.com/1.0/geolocation"/>
   <feature name="http://api.phonegap.com/1.0/media"/>
@@ -81,7 +81,9 @@
     <!--hgs para splash-->
     <plugin name="SplashScreen" value="”org.apache.cordova.SplashScreen"/>
 
-    <plugin name="org.apache.cordova.camera" version="0.3.2" />
+    <!--HABILITAR CÁMARA PARA ANDROID-->
+    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <!--HABILITAR CÁMARA PARA ANDROID-->
 
     <!--hgs, crec que ho necessitare per iOS-->
    <plugin name="Geolocation" value="CDVLocation" />
