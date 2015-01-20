@@ -33,9 +33,9 @@ function deviceReady() {
     /*hgs 080414*/
     //navigator.splashscreen.hide();
 
-    setTimeout(function() {
-        navigator.splashscreen.hide();
-    }, 1000);
+    //setTimeout(function() {
+    //    navigator.splashscreen.hide();
+    //}, 1000);
     try {
         //$.mobile.phonegapNavigationEnabled = true;
         document.addEventListener("backbutton", handleBackButton, false); //Hgs 080514
