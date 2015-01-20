@@ -27,6 +27,7 @@ window.addEventListener('load', function () {
     } else {
         deviceReady();
     }
+    inicioPaginaTipoIncidencia();
 }, false);
 
 function deviceReady() {
@@ -62,7 +63,7 @@ function deviceReady() {
             catch (e) { mensaje('exception carregant llista de carrers : ' + e.message, 'error'); }
         }
 
-        inicioPaginaTipoIncidencia();
+
         //navigator.splashscreen.hide();
     }
     catch (ex) {
